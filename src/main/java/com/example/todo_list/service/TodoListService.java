@@ -1,8 +1,8 @@
-package com.example.service;
-import com.example.model.TodoItem;
-import com.example.model.TodoList;
-import com.example.repository.TodoItemRepository;
-import com.example.repository.TodoListRepository;
+package com.example.todo_list.service;
+import com.example.todo_list.model.TodoItem;
+import com.example.todo_list.model.TodoList;
+import com.example.todo_list.repository.TodoItemRepository;
+import com.example.todo_list.repository.TodoListRepository;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,8 +1,8 @@
-package com.example.repository;
+package com.example.todo_list.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.model.TodoItem;
+import com.example.todo_list.model.TodoItem;
 
 public interface TodoItemRepository extends JpaRepository<TodoItem, Long>{
     

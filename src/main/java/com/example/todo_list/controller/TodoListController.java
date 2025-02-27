@@ -1,9 +1,9 @@
-package com.example.controller;
+package com.example.todo_list.controller;
 
+import com.example.todo_list.model.TodoItem;
+import com.example.todo_list.model.TodoList;
+import com.example.todo_list.service.TodoListService;
 
-import com.example.model.TodoList;
-import com.example.model.TodoItem;
-import com.example.service.TodoListService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.List;
 public class TodoListController {
     private final TodoListService todoListService;
 
-    @GetMapping
+    @GetMapping()
     public List<TodoList> getAllTodoList(){
         return todoListService.getAllTodoList();
     }
@@ -28,7 +28,7 @@ public class TodoListController {
         .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping()
     public TodoList createTodoList(@RequestBody TodoList todoList){
         return todoListService.createTodoList(todoList);
     }

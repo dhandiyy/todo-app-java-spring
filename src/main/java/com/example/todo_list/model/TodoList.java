@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.todo_list.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,6 +16,6 @@ public class TodoList {
 
     private String name;
 
-    @OneToMany(mappedBy = "todolist", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "todoList", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TodoItem> items;
 }
