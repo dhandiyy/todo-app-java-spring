@@ -1,0 +1,7 @@
+### Create a Checklist
+POST http://localhost:8080/api/todolist
+Content-Type: application/json
+
+{
+  "name": "Belanja Bulanan"
+}
