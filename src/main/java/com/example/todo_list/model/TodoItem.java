@@ -1,5 +1,7 @@
 package com.example.todo_list.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,6 +19,7 @@ public class TodoItem {
 
     @ManyToOne
     @JoinColumn(name = "todolist_id")
+    @JsonIgnore
     private TodoList todoList;
     
 }

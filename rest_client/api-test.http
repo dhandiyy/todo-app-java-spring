@@ -5,3 +5,20 @@ Content-Type: application/json
 {
   "name": "Belanja Bulanan"
 }
+
+### Get All Checklists
+GET http://localhost:8080/api/todolist
+Accept: application/json
+
+### Get a Checklist by ID
+GET http://localhost:8080/api/todolist/1
+Accept: application/json
+
+### Add Item to a Checklist
+POST http://localhost:8080/api/todolist/1/items
+Content-Type: application/json
+
+{
+  "name": "Beli Beras",
+  "completed": false
+}
