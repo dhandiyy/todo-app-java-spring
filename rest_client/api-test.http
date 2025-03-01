@@ -22,3 +22,7 @@ Content-Type: application/json
   "name": "Beli Beras",
   "completed": false
 }
+
+### Add Item to a Checklist
+PATCH  http://localhost:8080/api/todolist/items/1/status?completed=true
+Content-Type: application/json

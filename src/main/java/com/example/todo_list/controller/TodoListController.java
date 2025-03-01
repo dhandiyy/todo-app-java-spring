@@ -28,6 +28,13 @@ public class TodoListController {
         .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/items/{id}")
+    public ResponseEntity<TodoItem> getTodoItemById(@PathVariable Long id){
+        return todoListService.getTodoItemById(id)
+        .map(ResponseEntity::ok)
+        .orElse(ResponseEntity.notFound().build());
+    }
+
     @PostMapping()
     public TodoList createTodoList(@RequestBody TodoList todoList){
         return todoListService.createTodoList(todoList);
@@ -38,6 +45,7 @@ public class TodoListController {
         todoListService.deleteTodoList(id);
         return ResponseEntity.noContent().build();
     }
+
     @PostMapping("/{id}/items")
     public TodoItem addItemToTodoList(@PathVariable Long id, @RequestBody TodoItem todoItem){
         return todoListService.addItemToTodoList(id, todoItem);
@@ -53,4 +61,4 @@ public class TodoListController {
     public TodoItem updateItemStatus(@PathVariable Long itemId, @RequestParam boolean completed) {
         return todoListService.updateTodoItemStatus(itemId, completed);
     }
-}
+} 

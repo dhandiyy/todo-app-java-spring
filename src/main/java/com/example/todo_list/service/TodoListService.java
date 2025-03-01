@@ -25,6 +25,10 @@ public class TodoListService {
         return todoListRepository.findById(id);
     }
 
+    public Optional<TodoItem> getTodoItemById(Long id){
+        return todoItemRepository.findById(id);
+    }
+
     public TodoList createTodoList(TodoList todoList){
         return todoListRepository.save(todoList);
     }
